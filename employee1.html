@@ -1,0 +1,730 @@
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <meta http-equiv = "X-UA-Compatible" content = "IE = edge">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+        
+        <title>Employee Application</title>
+    </head>
+    <script>
+        $(document).ready(function() {
+                $("#authorize_to_work").css("visibility", "hidden");
+            $("#when_company").css("visibility", "hidden");
+            $("#felony_explanation_field").css("visibility", "hidden");
+                    //var button1 = document.getElementById("citizen_radio_2");
+
+                    $( "#citizen_radio_2" ).click(function() {
+                        $("#authorize_to_work").css("visibility", "visible");
+                    })
+                    $( "#citizen_radio_1" ).click(function() {
+                        $("#authorize_to_work").css("visibility", "hidden");
+                    })
+                    $( "#company_radio_1" ).click(function() {
+                        $("#when_company").css("visibility", "visible");
+                    })
+                    $( "#company_radio_2" ).click(function() {
+                        $("#when_company").css("visibility", "hidden");
+                    })
+                    $( "#felony_radio_1" ).click(function() {
+                        $("#felony_explanation_field").css("visibility", "visible");
+                    })
+                    $( "#felony_radio_2" ).click(function() {
+                        $("#felony_explanation_field").css("visibility", "hidden");
+                    })
+        });
+    </script>
+    <style>
+        p{
+            font-weight: bold;
+            font-size: 1.25em;
+        }
+    </style>
+    <body>
+        <div class="container">
+        <form>
+            <fieldset>
+                <legend>Applicant Information</legend>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="first_name">First Name</label>
+                                <input type="text" class="form-control" id="first_name" name="first_name" placeholder="First Name" required>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="middle_name">Middle Name</label>
+                                <input type="text" class="form-control" id="middle_name" name="middle_name" placeholder="Middle Name" required>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="last_name">Last Name</label>
+                                <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Last Name" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="street_address">Street Address</label>
+                                <textarea class="form-control" name="street_address" required></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="city">City</label>
+                                <input type="text" class="form-control" name="city" placeholder="City" required>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="zip_code">ZIP Code</label>
+                                <input type="number" class="form-control" name="zip_code" placeholder="ZIP Code" maxlength="5" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Phone</label>
+                                <input type="tel" class="form-control" name="phone" pattern="[\(]\d{3}[\)]\d{3}[\-]\d{4}" placeholder="(555)555-5555">
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <label>Driver's License Number</label>
+                                <input type="text" class="form-control" name="dl_number" placeholder="Driver's License Number" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Date Available</label>
+                                <input type="date" class="form-control" name="date_available" required>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>SSN</label>
+                                <input type="text" class="form-control" name="SSN" pattern="\d{3}[\-]\d{2}[\-]\d{4}" placeholder="XXX-XX-XXXX" required>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Desired Salary</label>
+                                <input type="number" class="form-control" name="desired_salary" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Position Applied For</label>
+                                <input type="text" class="form-control" name="position" placeholder="Position" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group" id="citizen_us">
+                                <label>Are you a Citizen of the United States?</label>
+                                <input type="radio" name="citizen" id="citizen_radio_1" value="1" required> Yes
+                                <input type="radio" name="citizen" id="citizen_radio_2" value="0"> No
+                            </div>
+                        </div>
+                        <div class="col-md-6" id="authorize_to_work">
+                            <div class="form-group">
+                                <label>Are you authorized to work in the United States?</label>
+                                <input type="radio" name="authorize" id="authorize_radio_1" value="1"> Yes
+                                <input type="radio" name="authorize" id="authorize_radio_2" value="0"> No
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group" id="company">
+                                <label>Have you ever worked for this company?</label>
+                                <input type="radio" name="company" id="company_radio_1" value="1" required> Yes
+                                <input type="radio" name="company" id="company_radio_2" value="0"> No
+                            </div>
+                        </div>
+                        <div class="col-md-6" id="when_company">
+                            <div class="form-inline">
+                                <label>When?</label>
+                                <input type="date" class="form-control" name="when_company_from">
+                                to
+                                <input type="date" class="form-control" name="when_company_to">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Have you ever been convicted of a felony?</label>
+                                <input type="radio" name="felony" id="felony_radio_1" value="1" required> Yes
+                                <input type="radio" name="felony" id="felony_radio_2" value="0"> No
+                                <br>
+                            </div>
+                        </div>
+                        <div class="col-md-6" id="felony_explanation_field">
+                            <div class="form-group">
+                                <label>Explain</label>
+                                <textarea class="form-control" name="felony_explanation"></textarea> 
+                            </div>
+                        </div>
+                    </div>
+            </fieldset>
+            <fieldset>
+                <legend>Education</legend>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>High School</label>
+                            <input type="text" class="form-control" name="high_school" placeholder="Name of High School">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label>Address</label>
+                        <textarea class="form-control" name="high_school_address"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6" id="when_hs">
+                        <div class="form-inline">
+                            <label>When?</label>
+                            <input type="date" class="form-control" name="when_hs_from">
+                            to
+                            <input type="date" class="form-control" name="when_hs_to">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Did you graduate?</label>
+                            <input type="radio" name="hs_graduate" id="hs_graduate_radio_1" value="1" required> Yes
+                            <input type="radio" name="hs_graduate" id="hs_graduate_radio_2" value="0"> No
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label>Degree</label>
+                            <input type="text" class="form-control" name="hs_degree" id= "hs_degree">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>College</label>
+                            <input type="text" class="form-control" name="college" placeholder="Name of College">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label>Address</label>
+                        <textarea class="form-control" name="college_address"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6" id="when_hs">
+                        <div class="form-inline">
+                            <label>When?</label>
+                            <input type="date" class="form-control" name="when_college_from">
+                            to
+                            <input type="date" class="form-control" name="when_college_to">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Did you graduate?</label>
+                            <input type="radio" name="hs_graduate" id="college_graduate_radio_1" value="1" required> Yes
+                            <input type="radio" name="hs_graduate" id="college_graduate_radio_2" value="0"> No
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label>Degree</label>
+                            <input type="text" class="form-control" name="college_degree" id= "college_degree">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Other</label>
+                            <input type="text" class="form-control" name="other" placeholder="Name of Other School">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label>Address</label>
+                        <textarea class="form-control" name="other_address"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6" id="when_other">
+                        <div class="form-inline">
+                            <label>When?</label>
+                            <input type="date" class="form-control" name="when_other_from">
+                            to
+                            <input type="date" class="form-control" name="when_other_to">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Did you graduate?</label>
+                            <input type="radio" name="other_graduate" id="other_graduate_radio_1" value="1" required> Yes
+                            <input type="radio" name="other_graduate" id="other_graduate_radio_2" value="0"> No
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label>Degree</label>
+                            <input type="text" class="form-control" name="other_degree" id= "other_degree">
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>References</legend>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <p>Reference 1</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" class="form-control" name="reference_1_name" id="reference_1_name" placeholder="Full Name">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Relationship</label>
+                            <input type="text" class="form-control" name="reference_1_relationship" id="reference_1_relationship" placeholder="ex. Co-Worker">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Company</label>
+                            <input type="text" class="form-control" name="reference_1_company" id="reference_1_company" placeholder="Company Name">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Telephone</label>
+                            <input type="tel" class="form-control" name="reference_1_telephone" id="reference_1_telephone" placeholder="(555)555-5555" pattern="[\(]\d{3}[\)]\d{3}[\-]\d{4}">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label>Address</label>
+                        <textarea class="form-control" name="reference_1_address" rows="3"></textarea> 
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <p>Reference 2</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" class="form-control" name="reference_2_name" id="reference_2_name" placeholder="Full Name">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Relationship</label>
+                            <input type="text" class="form-control" name="reference_2_relationship" id="reference_2_relationship" placeholder="ex. Co-Worker">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Company</label>
+                            <input type="text" class="form-control" name="reference_2_company" id="reference_2_company" placeholder="Company Name">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Telephone</label>
+                            <input type="tel" class="form-control" name="reference_2_telephone" id="reference_2_telephone" placeholder="(555)555-5555" pattern="[\(]\d{3}[\)]\d{3}[\-]\d{4}">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label>Address</label>
+                        <textarea class="form-control" name="reference_2_address" rows="3"></textarea> 
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <p>Reference 3</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" class="form-control" name="reference_3_name" id="reference_3_name" placeholder="Full Name">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Relationship</label>
+                            <input type="text" class="form-control" name="reference_3_relationship" id="reference_3_relationship" placeholder="ex. Co-Worker">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Company</label>
+                            <input type="text" class="form-control" name="reference_3_company" id="reference_3_company" placeholder="Company Name">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Telephone</label>
+                            <input type="tel" class="form-control" name="reference_3_telephone" id="reference_3_telephone" placeholder="(555)555-5555" pattern="[\(]\d{3}[\)]\d{3}[\-]\d{4}">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label>Address</label>
+                        <textarea class="form-control" name="reference_3_address" rows="3"></textarea> 
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Previous Employment</legend> 
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <p>Previous Employer 1</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Company Name</label>
+                            <input type="text" class="form-control" name="previous_employment_name_1" id="previous_employment_name_1" placeholder="Company Name">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Phone</label>
+                            <input type="tel" class="form-control" name="previous_emplyment_phone_1" id="previous_employment_phone_1"
+                        </div>
+                    </div>
+                </div>
+                </div> 
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>Address</label>
+                        <textarea class="form-control" name="previous_emplyment_address_1" rows="3"></textarea>
+                    </div>
+                    <div class="col-md-6">
+                        <label>Supervisor</label>
+                        <input type="text" class="form-control" name="previous_emplyment_supervisor_1" id="previous_emplyment_supervisor_1" placeholder="Supervisor Name">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Job Title</label>
+                            <input type="text" class="form-control" name="previous_emplyment_job_title_1" id="previous_emplyment_job_title_1" placeholder="Job Title">
+                        </div>
+                    </div> 
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Starting Salary</label>
+                            <input type="number" class="form-control" name="previous_emplyment_starting_salary_1" id="previous_emplyment_starting_salary_1">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Ending Salary</label>
+                            <input type="number" class="form-control" name="previous_emplyment_ending_salary_1" id="previous_emplyment_ending_salary_1">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label>Responsibilities</label>
+                            <input type="text" class="form-control" name="previous_emplyment_responsibilities_1" id="previous_emplyment_responsibilities_1" placeholder="ex. cleaning, rinsing,...">
+                        </div>
+                    </div>    
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-inline">
+                            <label>Duration</label>
+                            <input type="date" class="form-control" name="previous_emplyment_from_1">
+                            to
+                            <input type="date" class="form-control" name="previous_emplyment_to_1">
+                        </div>
+                    </div> 
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Reason for Leaving</label>
+                            <input type="text" class="form-control" name="previous_emplyment_leaving_1" id="previous_emplyment_leaving_1" placeholder="Reason for Leaving">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label>May we contact your previous supervisor for a reference?</label>
+                        <input type="radio" name="previous_emplyment_contact_supervisor_1" id="previous_emplyment_contact_supervisor_1" value="1" required> Yes
+                        <input type="radio" name="previous_emplyment_contact_supervisor_1" id="previous_emplyment_contact_supervisor_1" value="0"> No
+                    </div>    
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <p>Previous Employer 2</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Company Name</label>
+                            <input type="text" class="form-control" name="previous_employment_name_2" id="previous_employment_name_2" placeholder="Company Name">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Phone</label>
+                            <input type="tel" class="form-control" name="previous_emplyment_phone_2" id="previous_employment_phone_2"
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>Address</label>
+                        <textarea class="form-control" name="previous_emplyment_address_2" rows="3"></textarea>
+                    </div>
+                    <div class="col-md-6">
+                        <label>Supervisor</label>
+                        <input type="text" class="form-control" name="previous_emplyment_supervisor_2" id="previous_emplyment_supervisor_2" placeholder="Supervisor Name">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Job Title</label>
+                            <input type="text" class="form-control" name="previous_emplyment_job_title_2" id="previous_emplyment_job_title_2" placeholder="Job Title">
+                        </div>
+                    </div> 
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Starting Salary</label>
+                            <input type="number" class="form-control" name="previous_emplyment_starting_salary_2" id="previous_emplyment_starting_salary_2">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Ending Salary</label>
+                            <input type="number" class="form-control" name="previous_emplyment_ending_salary_2" id="previous_emplyment_ending_salary_2">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label>Responsibilities</label>
+                            <input type="text" class="form-control" name="previous_emplyment_responsibilities_2" id="previous_emplyment_responsibilities_2" placeholder="ex. cleaning, rinsing,...">
+                        </div>
+                    </div>    
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-inline">
+                            <label>Duration</label>
+                            <input type="date" class="form-control" name="previous_emplyment_from_2">
+                            to
+                            <input type="date" class="form-control" name="previous_emplyment_to_2">
+                        </div>
+                    </div> 
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Reason for Leaving</label>
+                            <input type="text" class="form-control" name="previous_emplyment_leaving_2" id="previous_emplyment_leaving_2" placeholder="Reason for Leaving">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label>May we contact your previous supervisor for a reference?</label>
+                        <input type="radio" name="previous_emplyment_contact_supervisor_2" id="previous_emplyment_contact_supervisor_2" value="1" required> Yes
+                        <input type="radio" name="previous_emplyment_contact_supervisor_2" id="previous_emplyment_contact_supervisor_2" value="0"> No
+                    </div>    
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <p>Previous Employer 3</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Company Name</label>
+                            <input type="text" class="form-control" name="previous_employment_name_3" id="previous_employment_name_3" placeholder="Company Name">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Phone</label>
+                            <input type="tel" class="form-control" name="previous_emplyment_phone_3" id="previous_employment_phone_3"
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>Address</label>
+                        <textarea class="form-control" name="previous_emplyment_address_3" rows="3"></textarea>
+                    </div>
+                    <div class="col-md-6">
+                        <label>Supervisor</label>
+                        <input type="text" class="form-control" name="previous_emplyment_supervisor_3" id="previous_emplyment_supervisor_3" placeholder="Supervisor Name">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Job Title</label>
+                            <input type="text" class="form-control" name="previous_emplyment_job_title_3" id="previous_emplyment_job_title_3" placeholder="Job Title">
+                        </div>
+                    </div> 
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Starting Salary</label>
+                            <input type="number" class="form-control" name="previous_emplyment_starting_salary_3" id="previous_emplyment_starting_salary_3">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Ending Salary</label>
+                            <input type="number" class="form-control" name="previous_emplyment_ending_salary_3" id="previous_emplyment_ending_salary_3">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label>Responsibilities</label>
+                            <input type="text" class="form-control" name="previous_emplyment_responsibilities_3" id="previous_emplyment_responsibilities_3" placeholder="ex. cleaning, rinsing,...">
+                        </div>
+                    </div>    
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-inline">
+                            <label>Duration</label>
+                            <input type="date" class="form-control" name="previous_emplyment_from_3">
+                            to
+                            <input type="date" class="form-control" name="previous_emplyment_to_3">
+                        </div>
+                    </div> 
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Reason for Leaving</label>
+                            <input type="text" class="form-control" name="previous_emplyment_leaving_3" id="previous_emplyment_leaving_2" placeholder="Reason for Leaving">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label>May we contact your previous supervisor for a reference?</label>
+                        <input type="radio" name="previous_emplyment_contact_supervisor_3" id="previous_emplyment_contact_supervisor_3" value="1" required> Yes
+                        <input type="radio" name="previous_emplyment_contact_supervisor_3" id="previous_emplyment_contact_supervisor_3" value="0"> No
+                    </div>    
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Military Service</legend>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Branch</label>
+                            <input type="text" name="military_branch" id="military_branch" class="form-control" placeholder="Military Branch">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-inline">
+                            <label>Duration</label>
+                            <input type="date" class="form-control" name="military_from">
+                            to
+                            <input type="date" class="form-control" name="military_3">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Rank at Discharge</label>
+                            <input type="text" class="form-control" name="military_rank" id="military_rank" placeholder="Rank at Discharge">
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="form-group">
+                            <label>Type of Discharge</label>
+                            <input type="text" class="form-control" name="miliary_discharge" id="military_discharge" placeholder="Type of Discharge">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label>If other than honorable, explain:</label>
+                            <textarea class="form-control" name="military_explanation"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Disclaimer and Signature</legend>
+                <div class="row">
+                    <div class="col-md-12">
+                        <small>I certify that my answers are true and complete to the best of my knowledge. If this application leads to employment, I understand that false or misleading information in my application or interview may result in my release.</small>
+                        <br>
+                        <small>I authorize the company to contact any and of the references I have listed above to obtain previous employment information or any other pertinent information that they may have. Further I release the above mentioned references for any and all liability for any damages that may result from information collected by this company. Verification of eligibility to work in the United States must be satisfied for an offer to be made. I understand that nothing contained in this application should be considered as a contract of employment. I acknowledge that I am on employer at will.</small>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group text-center">
+                            <label>Electronic Signature</label>
+                            <input type="text" class="form-control" name="signature" id="signature" placeholder="Electronic Signature" required>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+    </body>
+</html>
