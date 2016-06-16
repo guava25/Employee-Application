@@ -1,0 +1,138 @@
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <meta http-equiv = "X-UA-Compatible" content = "IE = edge">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+        
+        <title>Release Form</title>
+    </head>
+    <script>
+        $(document).ready(function() {
+                $("#authorize_to_work").css("visibility", "hidden");
+            $("#when_company").css("visibility", "hidden");
+            $("#felony_explanation_field").css("visibility", "hidden");
+                    //var button1 = document.getElementById("citizen_radio_2");
+
+                    $( "#rehire0" ).click(function() {
+                        $("#explain").css("visibility", "visible");
+                    })
+                    $( "#rehire1" ).click(function() {
+                        $("#explain").css("visibility", "hidden");
+                    })
+        });
+    </script>
+    <style>
+        #bold {
+            font-weight: bold;
+        }
+    </style>
+    <body>
+        <div class="container">
+        <form>
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="form-group">
+                        <label>Mail to:</label>
+                        <input type="text" class="form-control" id="mail_to" name="mail_to" placeholder="Name of Company/Individual" required>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="street_address">Address</label>
+                        <textarea class="form-control" name="address" required></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="form-group">
+                        <label>Name of Applicant</label>
+                        <input type="tel" class="form-control" name="applicant_name" placeholder="Name of Applicant" required>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label>SSN</label>
+                        <input type="text" class="form-control" name="SSN" pattern="\d{3}[\-]\d{2}[\-]\d{4}" placeholder="XXX-XX-XXXX" required>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Position Held</label>
+                        <input type="text" class="form-control" name="position_held" placeholder="Position Held" required>
+                    </div>
+                </div>
+                <div class="col-md-6" id="when_company">
+                    <div class="form-inline">
+                        <label>Dates of Employment</label>
+                        <input type="date" class="form-control" name="when_company_from">
+                        to
+                        <input type="date" class="form-control" name="when_company_to">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <table class="responsive">
+                        <tr id="bold">
+                            <td></td>
+                            <td>Excellent</td>
+                            <td>Good</td>
+                            <td>Poor</td>
+                        </tr>
+                        <tr>
+                            <td id="bold">Quality of Work</td>
+                            <td><input type="radio" name="quality_of_work" id="quality_of_work" value="2"></td>
+                            <td><input type="radio" name="quality_of_work" id="quality_of_work" value="1"></td>
+                            <td><input type="radio" name="quality_of_work" id="quality_of_work" value="0"></td>
+                        </tr>
+                        <tr>
+                            <td id="bold">Reliability</td>
+                            <td><input type="radio" name="reliability" id="reliability" value="2"></td>
+                            <td><input type="radio" name="reliability" id="reliability" value="1"></td>
+                            <td><input type="radio" name="reliability" id="reliability" value="0"></td>
+                        </tr>
+                        <tr>
+                            <td id="bold">Conduct Performance</td>
+                            <td><input type="radio" name="conduct_performance" id="conduct_performance" value="2"></td>
+                            <td><input type="radio" name="conduct_performance" id="conduct_performance" value="1"></td>
+                            <td><input type="radio" name="conduct_performance" id="conduct_performance" value="0"></td>
+                        </tr>
+                        <tr>
+                            <td id="bold">Ability to work with othersk</td>
+                            <td><input type="radio" name="ability" id="ability" value="2"></td>
+                            <td><input type="radio" name="ability" id="ability" value="1"></td>
+                            <td><input type="radio" name="ability" id="ability" value="0"></td>
+                        </tr>
+                        <tr>
+                            <td id="bold">Eligible for Rehire</td>
+                            <td><input type="radio" name="rehire" id="rehire1" value="1"> Yes </td>
+                            <td><input type="radio" name="rehire" id="rehire0" value="0"> No </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12" id="explain">
+                    <div class="form-group">
+                        <label>Explain</label>
+                        <textarea class="form-control" name="explain"></textarea> 
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+    </body>
+</html>
