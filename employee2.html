@@ -82,8 +82,8 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-12 text-center">
-                    <table class="responsive">
+                <div class="col-md-12">
+                    <table class="table">
                         <tr id="bold">
                             <td></td>
                             <td>Excellent</td>
@@ -109,7 +109,7 @@
                             <td><input type="radio" name="conduct_performance" id="conduct_performance" value="0"></td>
                         </tr>
                         <tr>
-                            <td id="bold">Ability to work with othersk</td>
+                            <td id="bold">Ability to work with others</td>
                             <td><input type="radio" name="ability" id="ability" value="2"></td>
                             <td><input type="radio" name="ability" id="ability" value="1"></td>
                             <td><input type="radio" name="ability" id="ability" value="0"></td>
@@ -117,6 +117,7 @@
                         <tr>
                             <td id="bold">Eligible for Rehire</td>
                             <td><input type="radio" name="rehire" id="rehire1" value="1"> Yes </td>
+                            <td></td>
                             <td><input type="radio" name="rehire" id="rehire0" value="0"> No </td>
                         </tr>
                     </table>
@@ -128,8 +129,18 @@
                         <label>Explain</label>
                         <textarea class="form-control" name="explain"></textarea> 
                     </div>
+                    <small>You answered “no” to rehire eligibility or you possess any other pertinent information, positive or negative in regards to the named applicant’s ability, character and/or integrity, the signature below gives you the authority to share the information.</small>
                 </div>
             </div>
+            <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group text-center">
+                            <small>I hereby authorize any person, company, or organization to furnish answers to the questions regarding my employment record. I hereby release all liability created by this inquiry into my employment record, by the communication of the requested information, or by any action taken based on that information and from any other claim for relief of any kind and from any and all causes of action which I might otherwise assert based upon said inquiry, communication, or action.</small><br>
+                            <label>Electronic Signature</label>
+                            <input type="text" class="form-control" name="signature" id="signature" placeholder="Electronic Signature" required>
+                        </div>
+                    </div>
+                </div>
             <button type="submit" class="btn btn-success">Submit</button>
         </form>
     </body>
