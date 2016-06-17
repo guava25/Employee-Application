@@ -1,0 +1,135 @@
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <meta http-equiv = "X-UA-Compatible" content = "IE = edge">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+        
+        <title>Release Form</title>
+    </head>
+    <script>
+        $(document).ready(function() {
+            $("#explain").css("visibility", "hidden");
+                    //var button1 = document.getElementById("citizen_radio_2");
+
+                    $( "#rehire0" ).click(function() {
+                        $("#explain").css("visibility", "visible");
+                    })
+                    $( "#rehire1" ).click(function() {
+                        $("#explain").css("visibility", "hidden");
+                    })
+        });
+    </script>
+    <style>
+        #bold {
+            font-weight: bold;
+        }
+    </style>
+    <body>
+        <div class="container">
+        <form>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>1. HIPPA Privacy is about:</label>
+                        <input type="text" class="form-control" id="privacy_1" name="privacy_1" placeholder="HIPPA Privacy is about..." required>
+                        <input type="text" class="form-control" id="privacy_2" name="privacy_2" placeholder="HIPPA Privacy is about..." required>
+                        <input type="text" class="form-control" id="privacy_3" name="privacy_3" placeholder="HIPPA Privacy is about..." required>
+                        <input type="text" class="form-control" id="privacy_4" name="privacy_4" placeholder="HIPPA Privacy is about..." required>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>2. HIPAA protects information in all forms (written information on paper, in the computer, and spoken information, etc).</label>
+                        <input type="radio" name="q_2" id="q_2" value="1"> True
+                        <input type="radio" name="q_2" id="q_2" value="0"> False
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>3. Normal practices such as speaking loudly in a crowded room, discussing patients over the phone, talking at a nursing station or discussing a patient’s condition with a supervisor are never permissible under HIPAA.</label>
+                        <input type="radio" name="q_3" id="q_3" value="1"> True
+                        <input type="radio" name="q_3" id="q_3" value="0"> False
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>4. The minimum necessary deals with three aspects of information. List them:</label>
+                        <input type="text" class="form-control" id="q_4" name="q_4" placeholder="First" required>
+                        <input type="text" class="form-control" id="q_4" name="q_4" placeholder="Second" required>
+                        <input type="text" class="form-control" id="q_4" name="q_4" placeholder="Third" required>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>5. The minimum necessary HIPAA rule means that some patient information cannot be shared with you; if you do not need the information to do your job.</label>
+                        <input type="radio" name="q_5" id="q_5" value="1"> True
+                        <input type="radio" name="q_5" id="q_5" value="0"> False
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>6. HIPAA give patients more control over their health information and help them make informed choices about how personal health information may be used.</label>
+                        <input type="radio" name="q_6" id="q_6" value="1"> True
+                        <input type="radio" name="q_6" id="q_6" value="0"> False
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>7. ANY information you see, hear, or read through your job is considered confidential and is subject matter that falls under the HIPAA regulations.</label>
+                        <input type="radio" name="q_7" id="q_7" value="1"> True
+                        <input type="radio" name="q_7" id="q_7" value="0"> False
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>8. List 3 action steps you can take to keep patient health information confidential:</label>
+                        <input type="text" class="form-control" id="q_8" name="q_8" placeholder="HIPPA Privacy is about..." required>
+                        <input type="text" class="form-control" id="q_8" name="q_8" placeholder="HIPPA Privacy is about..." required>
+                        <input type="text" class="form-control" id="q_8" name="q_8" placeholder="HIPPA Privacy is about..." required>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>9. HIPAA allows for both criminal and civil penalties, which may include jail time and fines for certain types of breaches in confidentiality.</label>
+                        <input type="radio" name="q_9" id="q_9" value="1"> True
+                        <input type="radio" name="q_9" id="q_9" value="0"> False
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>10. There is no real connection between providing quality care and keeping the patient’s information private:</label>
+                        <input type="radio" name="q_10" id="q_10" value="1"> True
+                        <input type="radio" name="q_10" id="q_10" value="0"> False
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+    </body>
+</html>
