@@ -1,0 +1,183 @@
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <meta http-equiv = "X-UA-Compatible" content = "IE = edge">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+        
+        <title>TUBERCULOSIS (MANTOUX) SKIN TEST</title>
+    </head>
+    <script>
+    $(document).ready(function(){
+        $("#hide").css("visibility", "hidden");
+        $("#q4_y").click(function(){
+            $("#hide").css("visibility", "visible");
+        });
+        $("#q4").click(function(){
+            $("#hide").css("visibility", "hidden");
+        });
+    });
+</script>
+    <body>
+        <div class="container">
+            <h1>TUBERCULOSIS (MANTOUX) SKIN TEST</h1>
+            <form>
+                <div class="row">
+                    <div class = "col-md-12">
+                        <div class="form-group">
+                            <label>Employee Name</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="form-group">
+                            <label>Address</label>
+                            <textarea class="form-control" name="address" required></textarea>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Phone</label>
+                            <input type="tel" name="phone" id="phone" class="form-control" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <table class="table">
+                            <tr>
+                                <td>Have you been exposed to T.B. within the last year?</td>
+                                <td><input type="radio" name="q1" id="q1" value="1" required> Yes</td>
+                                <td><input type="radio" name="q1" id="q1" value="0" required> No</td>
+                            </tr>
+                            <tr>
+                                <td>Have you ever had a positive Mantoux Skin test?</td>
+                                <td><input type="radio" name="q2" id="q2" value="1" required> Yes</td>
+                                <td><input type="radio" name="q2" id="q2" value="0" required> No</td>
+                            </tr>
+                            <tr>
+                                <td>Have you ever been treated for T.B.?</td>
+                                <td><input type="radio" name="q3" id="q3" value="1" required> Yes</td>
+                                <td><input type="radio" name="q3" id="q3" value="0" required> No</td>
+                            </tr>
+                            <tr>
+                                <td>Have you ever received BCG?</td>
+                                <td><input type="radio" name="q4" id="q4_y" value="1" required> Yes</td>
+                                <td><input type="radio" name="q4" id="q4" value="0" required> No</td>
+                            </tr>
+                            <tr id="hide">
+                                <td colspan="3">When? <input type="date" class="form-control" id="q_bcg" name="q_bcg" placeholder=""></td>
+                            </tr>
+                            <tr>
+                                <td>Are you allergic to Tween 80, the stabilization agent in many T.B. Mantoux testing solutions?</td>
+                                <td><input type="radio" name="q5" id="q5" value="1" required> Yes</td>
+                                <td><input type="radio" name="q5" id="q5" value="0" required> No</td>
+                            </tr>
+                            <tr>
+                                <td>Have you recently been vaccinated with any live Virus vaccine?</td>
+                                <td><input type="radio" name="q6" id="q6" value="1" required> Yes</td>
+                                <td><input type="radio" name="q6" id="q6" value="0" required> No</td>
+                            </tr>
+                            <tr>
+                                <td>Have you recently had a serious viral infection?</td>
+                                <td><input type="radio" name="q7" id="q7" value="1" required> Yes</td>
+                                <td><input type="radio" name="q7" id="q7" value="0" required> No</td>
+                            </tr>
+                            <tr>
+                                <td>Are you taking corticosteroids or other immuno-suppressive drug?</td>
+                                <td><input type="radio" name="q8" id="q8" value="1" required> Yes</td>
+                                <td><input type="radio" name="q8" id="q8" value="0" required> No</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label>I hereby agree to be tested for Tuberculosis with the one-step or two step process (which ever is applicable), using the IPPB Mantoux, Aplisol, 0.1 cc. Intradermally into the forearm.</label>
+                            <input type="text" class="form-control" id="signature" name="signature" placeholder="Electronic Signature" required>
+                        </div>
+                    </div>
+                </div>
+            <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+            <fieldset><legend>Test 1</legend>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>Site</label>
+                        <input type="text" class="form-control" name="site_1" id="site_1" readonly>
+                    </div>
+                    <div class="col-md-6">
+                        <label>Test Date</label>
+                        <input type="date" class="form-control" name="test_date" id="test_date" readonly>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label>Reaction (bleeding, bruise, itching, etc.):</label>
+                        <input type="text" name="reaction" id="reaction" class="form-control" readonly>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>Result</label>
+                        <input type="text" name="result" id="result" class="form-control" readonly>
+                    </div>
+                    <div class="col-md-6">
+                        <label>Date Read</label>
+                        <input type="date" name="date_read" id="date_read" class="form-control" readonly>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label>Nurse Signature</label>
+                        <input type="text" name="nurse" id="nurse" class="form-control" readonly>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset><legend>Test 2</legend>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>Site</label>
+                        <input type="text" class="form-control" name="site_2" id="site_2" readonly>
+                    </div>
+                    <div class="col-md-6">
+                        <label>Test Date</label>
+                        <input type="date" class="form-control" name="test2_date" id="test2_date" readonly>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label>Reaction (bleeding, bruise, itching, etc.):</label>
+                        <input type="text" name="reaction2" id="reaction2" class="form-control" readonly>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>Result</label>
+                        <input type="text" name="result2" id="result2" class="form-control" readonly>
+                    </div>
+                    <div class="col-md-6">
+                        <label>Date Read</label>
+                        <input type="date" name="date_read2" id="date_read2" class="form-control" readonly>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label>Nurse Signature</label>
+                        <input type="text" name="nurse2" id="nurse2" class="form-control" readonly>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </body>
+</html>
