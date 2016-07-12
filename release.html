@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <meta http-equiv = "X-UA-Compatible" content = "IE = edge">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+        
+        <title>Authorization to Release Information</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <h1>Authorization to Release Information</h1>
+                </div>
+            </div>
+        <form>
+            <div class="row">
+                <div class="col-md-12"><div class="form-inline">
+                    <p>For the purpose of future employment, I,
+                            <input type="text" name="name" id="name" class="form-control" placeholder="Name">,
+                        Hereby authorize Robland Home Corporation, to obtain driving record information from any and all sources necessary to obtain onformation about my driving record.</p></div></div>
+                    
+                </div>
+            <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Applicant Signature</label>
+                            <input type="text" class="form-control" id="applicant_signature" name="applicant_signature" placeholder="Electronic Signature" required>
+                        </div>
+                    </div>
+                <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Witness Signature</label>
+                            <input type="text" class="form-control" id="witness" name="witness" placeholder="Electronic Signature" readonly>
+                        </div>
+                    </div>
+                </div>
+            <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+        </div>
+    </body>
+</html>
