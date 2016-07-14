@@ -1,0 +1,147 @@
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <meta http-equiv = "X-UA-Compatible" content = "IE = edge">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+        
+        <title>Reference Check Form</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <h1>Reference Check Form</h1>
+                </div>
+            </div>
+        <form>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Applicant Name</label>
+                        <input type="text" class="form-control" id="aname" name="aname" required>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Company Contacted</label>
+                        <input type="text" class="form-control" id="cc" name="cc" required>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Position Held</label>
+                        <input type="text" class="form-control" id="ph" name="ph" required>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-inline">
+                        <label>Reference Contact/Supervisor Name and Title</label>
+                        <input type="text" class="form-control" id="rcn" name="rcn" placeholder="Name" required>
+                        <input type="text" class="form-control" id="rct" name="rct" placeholder="Title" required>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-inline">
+                        <label>Dates of Employment:</label>
+                        From: <input type="date" class="form-control" id="def" name="def" required>
+                        To: <input type="date" class="form-control" id="det" name="det" required>
+                    </div>
+                </div>
+            </div>
+            <small>I hereby authorize the company <b><u>Robland Home Health Care Corporation</u></b> (and her affiliates listed above) to contact the employer listed under "Company Contacted" to verify information regarding my employment with the designated company. I acknowledge I have a right to receive a copy of this completed form from the former/current employer. I hereby give permission to contact my current employer if applicable and release my current and former employers and references from any and all liability.</small>
+            <div class="row">
+                <div class="col-md-12">
+                    <label>Signature</label>
+                    <input type="text" class="form-control" id="applicant_signature_2" name="applicant_signature_2" placeholder="Electronic Signature" required>
+                </div>
+            </div>
+            <small>The above named individual has applied for employment at our agency. We would appreciate it if you would furnish the information requested below. Please include employee comments for documents on reverse.</small>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Dates of Employment:</label>
+                            From: <input type="date" class="form-control" id="def" name="def" required>
+                            To: <input type="date" class="form-control" id="det" name="det" required>
+                            <label><input type="checkbox" name="correct" id="correct" value="1">Information Correct</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Reason for Separation</label>
+                            <input type="date" class="form-control" id="def" name="def" required>
+                            <label><input type="checkbox" name="na" id="na" value="1">N/A-Still Employed</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-inline">
+                        <label>Wages/Salary</label>
+                        <input type="number" class="form-control" id="wsfrom" name="wsfrom" required>
+                        <input type="number" class="form-control" id="wsto" name="wsto" required>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-inline">
+                        <label>Information that you can give regarding this employee's quality and quantity of work</label>
+                        <input type="radio" name="qqw" id="qqw" value="0" required> Below Average
+                        <input type="radio" name="qqw" id="qqw" value="1"> Average
+                        <input type="radio" name="qqw" id="qqw" value="2"> Above Average
+                        <input type="radio" name="qqw" id="qqw" value="3"> Exceptional/Far above average
+                        <input type="text" class="form-control" id="comments" name="comments" placeholder="Comments">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Please list any relevant Training/Education</label>
+                        <input type="text" class="form-control" id="topic1" name="topic1" placeholder="Topic">
+                        <input type="date" class="form-control" id="topic1date" name="topic1date">
+                        <input type="text" class="form-control" id="topic2" name="topic2" placeholder="Topic">
+                        <input type="date" class="form-control" id="topic2date" name="topic2date">
+                        <input type="text" class="form-control" id="topic3" name="topic3" placeholder="Topic">
+                        <input type="date" class="form-control" id="topic3date" name="topic3date">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Please list any disciplinary action, counseling, or performance concerns pertaining to this person's employment with your company:</label>
+                        <input type="text" class="form-control" id="topic1" name="d1" placeholder="Description">
+                        <input type="date" class="form-control" id="topic1date" name="d1date">
+                        <input type="text" class="form-control" id="topic2" name="d2" placeholder="Description">
+                        <input type="date" class="form-control" id="topic2date" name="d2date">
+                        <input type="text" class="form-control" id="topic3" name="d3" placeholder="Description">
+                        <input type="date" class="form-control" id="topic3date" name="d3date">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <label>Signature</label>
+                    <input type="text" class="form-control" id="refsig" name="refsig" placeholder="Reference Signature" required>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+        </div>
+    </body>
+</html>

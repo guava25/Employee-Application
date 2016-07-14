@@ -1,0 +1,140 @@
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <meta http-equiv = "X-UA-Compatible" content = "IE = edge">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+        
+        <title>Authorization for Criminal Background Check</title>
+    </head>
+    <script>
+        $(document).ready(function (){ 
+            $("input").addClass("form-control");
+        });
+    </script>
+    <body>
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <h1>Authorization for Criminal Background Check</h1>
+                </div>
+            </div>
+        <form>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>The following named individual has applied for the following position with our agency:</label>
+                        <input type="radio" name="position" id="position" value="0" required> PCA (Personal Care Attendant)
+                        <input type="radio" name="position" id="position" value="1"> HHA (Home Health Aide)
+                        <input type="radio" name="position" id="position" value="2"> Homemaker
+                        <input type="radio" name="position" id="position" value="3"> Homecare Nurse
+                        <ul>
+                            <li>RN <input type="radio" name="nurse_type" id="nurse_type"></li>
+                            <li>LPN <input type="radio" name="nurse_type" id="nurse_type"></li>
+                        </ul>
+                        <input type="radio" name="position" id="position" value="4"> Other
+                        <ul>
+                            <li><input type="text" name="otherpos" id="otherpos" placeholder="Specify position applied for"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label>Last Name of Applicant</label>
+                        <input type="text" name="lname" id="lname" placeholder="Last Name">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label>First Name of Applicant</label>
+                        <input type="text" name="fname" id="fname" placeholder="First Name">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label>Middle Name of Applicant</label>
+                        <input type="text" name="mname" id="mname" placeholder="Middle Name">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label>Maiden, Alias, Former Name of Applicant</label>
+                        <input type="text" name="aname" id="aname" placeholder="Maiden, Alias, Former Name">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label>Date of Birth</label>
+                        <input type="date" name="birth" id="birth">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-inline">
+                        <label>Gender</label>
+                        <input type="radio" name="gender" id="gender" value="0"> Male
+                        <input type="radio" name="gender" id="gender" value="1"> Female
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Street Address</label>
+                        <input type="text" name="address" id="address" placeholder="Street Address">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Phone</label>
+                        <input type="tel" name="phone" id="phone">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>SSN</label>
+                        <input type="number" name="phone" id="phone" required>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-inline">
+                        <label>Driver's License or State ID</label>
+                        <input type="text" name="stateid" id="stateid" placeholder="ID Number">
+                        <input type="text" name="state" id="state" placeholder="State Abbreviation (MN)">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <small>I authorize the Minnesota Bureau of Criminal Apprehension and MN Department of Human Services to disclose all criminal history record information to Robland Home Health Care Corporation (and her affiliates) for the purpose fo employment as specified above.</small>
+                    <small>The expiration fo this authorzation shall be for a period of one year from the date of my signature.</small>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <label>Signature</label>
+                    <input type="text" class="form-control" id="applicant_signature_2" name="applicant_signature_2" placeholder="Electronic Signature" required>
+                </div>
+            </div>
+            <div class="row">
+                <small>*All applicants are required to provide a photocopy of their driver's license and social security card (of other forms of ID that display date of birth and SSN). This ensures accuracy of the numbers when we submit the background studies to the State of MN Dept. of Human Services.</small>
+            </div>
+            <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+        </div>
+    </body>
+</html>

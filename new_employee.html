@@ -1,0 +1,166 @@
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <meta http-equiv = "X-UA-Compatible" content = "IE = edge">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+        
+        <title>New Employees Checklist</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <h1>New Employees Checklist</h1>
+                </div>
+            </div>
+        <form>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="app" id="app" value="1">Application</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="bs" id="bs" value="1">Background Study</label>
+                        <ul>
+                            <li>Sent <input type="date" name="bs_sent" class="form-control" id="bs_sent"></li>
+                            <li>Returned <input type="date" name="bs_returned" class="form-control" id="bs_returned"></li>
+                        </ul>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="rcr" id="rcr" value="1">Reference Check Release</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="w4" id="w4" value="1">W-4</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="i9" id="i9" value="1">I-9</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="desc" id="desc" value="1">Job Description</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="te" id="te" value="1">Tally of Education</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="tb" id="tb" value="1">TB Policy</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="copy" id="copy" value="1">Copy of <u>Current TB Test Results</u></label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="hepB" id="hepB" value="1">Hepatitis B Consent/Waiver Form</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="cci" id="cci" value="1">Confidentiality of Client Information</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="hcna" id="hcna" value="1">HIPAA Confidentiality and Non-disclosure Agreement</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="htest" id="htest" value="1">HIPAA Test</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="zt" id="zt" value="1">Zero Tolerance</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="dfw" id="dfw" value="1">Drug-Free Workplace</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="ci" id="ci" value="1">Conflict of Interest</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="ep" id="ep" value="1">Emergency Procedures</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="af" id="af" value="1">Acknowleghment of Fraud</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="mnhbr" id="mnhbr" value="1">MN Homecare Bill of Rights</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="oa" id="oa" value="1">Orientation Acknowledgment</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="mnhbr" id="mnhbr" value="1">Employee Orientaion Checklist</label>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <u>MAKE COPIES OF:</u>
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="dl" id="dl" value="1">Driver License</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="ssc" id="ssc" value="1">Social Security Card</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="wp" id="wp" value="1">Work Permit (if applicable)</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <p>PCA Application</p>
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="pca" id="pca" value="1">Individual PCA Enrollment Application</label>
+                        <ul>
+                            <li>Sent <input type="date" name="pca_sent" class="form-control" id="pca_sent"></li>
+                            <li>UMPI Returned <input type="date" name="pca_returned" class="form-control" id="pca_returned"></li>
+                        </ul>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="pca_time" id="pca_time" value="1">PCA Time and Activity Documentation</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="pca_do" id="pca_do" value="1">PCA Do's and Don'ts</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="dhs" id="dhs" value="1">PCS Certificate of Training (DHS)</label>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <u>GO ONLINE &amp; COMPLETE</u>
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="voig" id="voig" value="1"><a href="http://exclusions.oig.hhs.gov">Verify with Office of Inspector General</a></label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="voso" id="voso" value="1"><a href="http://www.nsopw.gov">Verify with Office of Sex Offender</a></label>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <p>HHA Application</p>
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="hhat" id="hhat" value="1">Home Health Aide Test</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="hhacrn" id="hhacrn" value="1">Home Health Aide Competency (with RN)</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="hhac" id="hhac" value="1">Home Health Aide Certificate</label>
+                    </div>
+                    <p>Nurse Application</p>
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="ncf" id="ncf" value="1">Nurse Competency Form</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Employee Signature</label>
+                        <input type="text" name="esignature" id="esignature" class="form-control" placeholder="Employee Signature">
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+        </div>
+    </body>
+</html>

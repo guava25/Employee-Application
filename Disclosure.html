@@ -1,0 +1,137 @@
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <meta http-equiv = "X-UA-Compatible" content = "IE = edge">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+        
+        <title>Disclosure of Criminal Conviction Information by Homecare Employees &amp; Applicants</title>
+    </head>
+    <script>
+        $(document).ready(function (){ 
+            $("input").addClass("form-control");
+        });
+    </script>
+    <body>
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <h1>Disclosure of Criminal Conviction Information by Homecare Employees &amp; Applicants</h1>
+                    <p>MN Law requires that we secure the following Information from any prospective or current employee who may be involved in duties Involving contact with clients in their homes. It Is very important that you provide complete and accurate information; failure to do so may bring adverse consequences, including the loss of any employment with this agency</p>
+                    <p>If you cannot honestly make the statement set forth In Section Abelow, you must also complete Section B. All Persons Need To Complete Section C</p>
+                </div>
+            </div>
+        <form>
+            <fieldset><legend>Section A</legend>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label>The undersigned hereby certifies that he or she has not been charged, convicted of (nor has he or she pled guilty to) any crime, other than a minor traffic violation, in any jurisdiction</label>
+                            <input type="text" name="signature_1" id="signature_1" placeholder="Signature">
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset><legend>Section B</legend>
+                <div class="row">
+                    <div class="col-md-12">
+                        If you have been charged, convicted of (or pled guilty to) any crimes, other than a minor traffic violation, in any Jurisdictin, please provide the following information.
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label>Describe the nature of the crime (i.e. name the crime for which you were charged and/or convicted and provide a brief summary of the facts of the case:</label>
+                            <input type="text" name="b1" id="b1" placeholder="Explain">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Name of Jurisdiction charged in</label>
+                            <input type="text" name="b2a" id="b2a" placeholder="Name of Jurisdiction">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Date Charged</label>
+                            <input type="date" name="b2b" id="b2b">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label>Describe the penalty imposed, including the time period of the penalty:</label>
+                            <input type="text" name="b3" id="b3" placeholder="Explain">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Name of Probation Officer <i>If applicable</i></label>
+                            <input type="text" name="officer" id="stateid" placeholder="Name of Probation Officer">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Address of Probation Officer <i>If applicable</i></label>
+                            <input type="text" name="o_address" id="o_address" placeholder="Address of Probation Officer">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label>Date fo release from incarceration <i>If applicable</i></label>
+                            <input type="date" name="release" id="release">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label>Signature</label>
+                        <input type="text" class="form-control" id="applicant_signature_2" name="applicant_signature_2" placeholder="Electronic Signature" required>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset><legend>Section C</legend>
+            <div class="row">
+                <small>I hereby authorize all individuals, institutions, and entitles with which I have been associated, who have the knowledge Concerning information requested in this form, to consult with and release information to the agency, its agents and
+designees.</small>
+                <small>I hereby release the agency, and its agents and designees, and all other individuals, institutions and entities providing information in accordance with the authorizations contained herein from liability for the acts performed in good faith and
+without malice in connection with investigation of this form and the release and exchange of information authorized above.
+Law shall in addition to any other applicable immunity provide this release for the investigatory activities.</small>
+                <small>I hereby agree that, as a condition of employment by the agency, I will promptly inform the agency in writing of any criminal convictions, in any jurisdiction (including all pleas of guilty), other than minor traffic offenses, of which I am convicted after
+today.</small>
+            </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>Signature</label>
+                        <input type="text" class="form-control" id="final_signature" name="final_signature" placeholder="Electronic Signature" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label>Full Name</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Full Name" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label>Date of Birth</label>
+                        <input type="date" class="form-control" id="dob" name="dob" required>
+                    </div>
+                </div>
+            <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+        </div>
+    </body>
+</html>

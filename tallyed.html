@@ -1,0 +1,121 @@
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <meta http-equiv = "X-UA-Compatible" content = "IE = edge">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+        
+        <title>Tally Education By Individual Employee</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <h1>Tally Education By Individual Employee</h1>
+                </div>
+            </div>
+        <form>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Employee Name:</label>
+                        <input type="text" name="name" id="name" class="form-control" placeholder="Employee Name" readonly>
+                    </div>
+                </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Hire Date:</label>
+                        <input type="date" name="date" id="date" class="form-control">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Calendar Year</label>
+                        <input type="text" name="cyear" id="cyear" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <td>Topic</td>
+                            <td>Date</td>
+                            <td>Hours on this Topic</td>
+                            <td>Total Cumulative Hours</td>
+                            <td>Comments</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>How to handle complaints/grievances</td>
+                            <td><input type="date" name="t11" id="t11" class="form-control"></td>
+                            <td>1</td>
+                            <td><input type="text" name="t12" id="t12" class="form-control"></td>
+                            <td><input type="text" name="t13" id="t13" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>Emergency/Disaster preparedness</td>
+                            <td><input type="date" name="t21" id="t21" class="form-control"></td>
+                            <td>1</td>
+                            <td><input type="text" name="t22" id="22" class="form-control"></td>
+                            <td><input type="text" name="t23" id="23" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>Infection Control</td>
+                            <td><input type="date" name="t31" id="t31" class="form-control"></td>
+                            <td>1</td>
+                            <td><input type="text" name="t32" id="t32" class="form-control"></td>
+                            <td><input type="text" name="t33" id="t33" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>Cultural Diversity</td>
+                            <td><input type="date" name="t41" id="t41" class="form-control"></td>
+                            <td>1</td>
+                            <td><input type="text" name="t42" id="t42" class="form-control"></td>
+                            <td><input type="text" name="t43" id="t43" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>Ethics Training</td>
+                            <td><input type="date" name="t51" id="t51" class="form-control"></td>
+                            <td>1</td>
+                            <td><input type="text" name="t52" id="t52" class="form-control"></td>
+                            <td><input type="text" name="t53" id="t53" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>Work place and patient safety</td>
+                            <td><input type="date" name="t61" id="t61" class="form-control"></td>
+                            <td>1</td>
+                            <td><input type="text" name="t62" id="t62" class="form-control"></td>
+                            <td><input type="text" name="t63" id="t63" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>OSHA</td>
+                            <td><input type="date" name="t71" id="t71" class="form-control"></td>
+                            <td><input type="text" name="t74" id="t74" class="form-control"></td>
+                            <td><input type="text" name="t72" id="t72" class="form-control"></td>
+                            <td><input type="text" name="t73" id="t73" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>First Aid/CPR</td>
+                            <td><input type="date" name="t81" id="t81" class="form-control"></td>
+                            <td><input type="text" name="t84" id="t84" class="form-control"></td>
+                            <td><input type="text" name="t82" id="t82" class="form-control"></td>
+                            <td><input type="text" name="t83" id="t83" class="form-control"></td>
+                        </tr>
+                    </tbody>
+            </table>    
+            </div>
+            <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+        </div>
+    </body>
+</html>
